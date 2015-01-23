@@ -37,3 +37,19 @@ class StockPicking(models.Model):
                 if file_type == 'zpl2':
                     zpl_printer.print_raw(content)
         return labels
+
+    label_types = ('colissimo', 'so_colissimo', 'postlogistics')
+
+    @api.multi
+    def do_transfer(self):
+        result = super(StockPicking, self).do_transfer()
+        for picking in self:
+            if picking.carrier_id.type in self.label_types:
+                labels = self.env['shipping.label'].search(
+                    [('res_id', '=', picking.id),
+                     ('res_model', '=', 'stock.picking'),
+                     ]
+                )
+                if not labels:
+                    self.generate_labels()
+        return result
