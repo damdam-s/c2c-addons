@@ -29,7 +29,7 @@ CREATE OR REPLACE VIEW c2c_budget_analytic AS
     ( SELECT c2c_xrate_conversion.value_dest
            FROM c2c_xrate_conversion(bl.currency_id, ( SELECT res_currency.id
                    FROM res_currency
-                  WHERE res_currency.name::text = 'CHF'::text), bl.amount, 'now'::text::date) c2c_xrate_conversion(xrate, value_dest)) AS amount_real_chf
+                  WHERE res_currency.name::text = 'CHF'::text), bl.amount, 'now'::text::date) c2c_xrate_conversion(xrate, value_dest)) AS amount_real_chf,
     ( SELECT c2c_xrate_conversion.value_dest
 			        FROM c2c_xrate_conversion(bl.currency_id, res_company.currency_id, bl.amount, 'now'::text::date) c2c_xrate_conversion(xrate, value_dest)) 
 			        AS amount_real_proj_company_curr
