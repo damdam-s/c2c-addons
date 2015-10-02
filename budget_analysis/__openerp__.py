@@ -20,39 +20,43 @@
 ##############################################################################
 
 {
-    'name' : 'Specific SQL views for budget analysis',
-    'version' : '1.0.0',
-    'category' : 'finance',
-    'description' : """
-    
+    'name': 'Specific SQL views for budget analysis',
+    'version': '1.0.0',
+    'category': 'finance',
+    'description': """
+
 Advanced budget analysis
 ========================
 
 Following views are added to provide detailed informations regarding budget.
-Actually there is no internal views to show the result, as the informations are exploited through some BI cube.
-It is recommended to use Excel Sheet and its Pivot tables to gain all analytic capabilities.
+Actually there is no internal views to show the result,
+as the informations are exploited through some BI cube.
+It is recommended to use Excel Sheet and its Pivot tables
+to gain all analytic capabilities.
 
 
 Views:
 ------
-* **c2c_ytd_dpt** : return all invoiced lines before or equal to the current date (Year To Date), for each department. With all project informations
-* **c2c_budget_analytic** : return the yearly financial budget and all budget line from current date
+* **c2c_ytd_dpt** : return all invoiced lines before or equal to the current
+                    date (Year To Date), for each department.
+                    With all project informations
+* **c2c_budget_analytic** : return the yearly financial budget and all
+                            budget line from current date
 
 Functions:
 ----------
 **c2c_xrate_conversion :**
 
-* *input* : source currency ; destination currency ; source amount ; date taken in count to calculate the exchange rate
-* *output* : calculated exchange rate ; calculated amount in destination currency
-    
-""",
-    'author' : 'Camptocamp',
-    'website' : 'http://www.camptocamp.com',
-    'depends' : ['budget','hr_timesheet','analytic_department'],
-    'data' : [
-             ],
-    'installable' : True,
-    'active' : False,
-}
+* *input* : source currency ; destination currency ; source amount ;
+            date taken in count to calculate the exchange rate
+* *output* : calculated exchange rate ; calculated amount in
+             destination currency
 
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+""",
+    'author': 'Camptocamp',
+    'website': 'http://www.camptocamp.com',
+    'depends': ['budget', 'hr_timesheet', 'analytic_department'],
+    'data': [],
+    'installable': True,
+    'active': False,
+}

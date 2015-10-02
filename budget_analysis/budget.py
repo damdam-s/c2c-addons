@@ -19,9 +19,8 @@
 #
 ##############################################################################
 
-from openerp.osv import orm, fields
-from openerp import tools
-from openerp.modules import get_module_resource
+from openerp.osv import orm
+from openerp.addons import get_module_resource
 
 
 class budget_analysis(orm.Model):
@@ -30,7 +29,7 @@ class budget_analysis(orm.Model):
     _auto = False
 
     def init(self, cr):
-        
+
         sql_path = get_module_resource('budget_analysis', 'sql',
                                        'function_c2c_xrate_conversion.sql')
         with file(sql_path) as sql_file:
@@ -45,5 +44,3 @@ class budget_analysis(orm.Model):
                                        'view_c2c_budget_analytic.sql')
         with file(sql_path) as sql_file:
             cr.execute(sql_file.read())
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4;

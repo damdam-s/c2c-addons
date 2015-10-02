@@ -18,24 +18,21 @@
 #
 ##############################################################################
 {
-        "name" : "l10n_fr accounting profile",
-        "description" : """Install all modules required for accounting in France
-        """,
-        "version" : "1.1",
-        "author" : "Camptocamp",
-        "category" : "Accounting & Finance",
-        "website": "http://www.camptocamp.com",
-        "depends" : [
-            'common_accounting_profile',
-            'l10n_fr',
-            'l10n_fr_rib',
-            'l10n_fr_siret',
-            'l10n_fr_fec',
-                    ],
-        "data" :[
-                        ],
-        "active": False,
-        "installable": True
+    "name": "l10n_fr accounting profile",
+    "description": """Install all modules required for accounting in France
+    """,
+    "version": "1.1",
+    "author": "Camptocamp",
+    "category": "Accounting & Finance",
+    "website": "http://www.camptocamp.com",
+    "depends": [
+        'common_accounting_profile',
+        'l10n_fr',
+        'l10n_fr_rib',
+        'l10n_fr_siret',
+        'l10n_fr_fec',
+        ],
+    "data": [],
+    "active": False,
+    "installable": True
 }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

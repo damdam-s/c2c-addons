@@ -18,27 +18,28 @@
 #
 ##############################################################################
 {
-        "name" : "L10n_ch accounting profile",
-        "description" : """Install all modules required for accounting in Switzerland
-        """,
-        "version" : "1.0",
-        "author" : "Camptocamp",
-        "category" : "Accounting & Finance",
-        "website": "http://www.camptocamp.com",
-        "depends" : [
-            'common_accounting_profile',
-            'l10n_ch',
-            'l10n_ch_bank',
-            'l10n_ch_base_bank',
-            'l10n_ch_dta',
-            'l10n_ch_payment_slip',
-            'l10n_ch_zip',
-            'l10n_multilang',
-                    ],
-        "data" :[
-                        ],
-        "active": False,
-        "installable": True
+    "name": "L10n_ch accounting profile",
+    "description": """Install all modules required for accounting in Switzerland
+    """,
+    "version": "1.0",
+    "author": "Camptocamp",
+    "category": "Accounting & Finance",
+    "website": "http://www.camptocamp.com",
+    "depends": [
+        'common_accounting_profile',
+        'l10n_ch',
+        'l10n_ch_bank',
+        'l10n_ch_base_bank',
+        'l10n_ch_dta',
+        'l10n_ch_payment_slip',
+        'l10n_ch_zip',
+        'l10n_multilang',
+        'payment_term_rounding',
+        'l10n_ch_dta_base_transaction_id',
+        'l10n_ch_payment_slip_base_transaction_id',
+        'l10n_ch_payment_slip_account_statement_base_completion'
+        ],
+    "data": [],
+    "active": False,
+    "installable": True
 }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
